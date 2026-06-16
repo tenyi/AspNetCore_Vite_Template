@@ -1,26 +1,31 @@
 # AspNetCore_Vite_Template
-A Startup Template for ASP.Net Core and Vite project
+A Startup Template for ASP\.NET Core and Vite project
 
 # Feature
-1. Integrating Asp.Net Core and Vite.
+1. Integrating ASP\.NET Core and Vite.
 2. Support frontend app HMR
 3. Support HTTPS
 4. Auto build and publish frontend app when publishing backend app
-5. 9 templates -- both Vue and React (JS and TS)
+5. 12 templates — 3 backends (Controllers / Minimal API / MVC) × 4 frontends (Vue / React in JS or TS)
+6. **Built on .NET 10** — this version only supports .NET 10. The older .NET 6 and ASP\.NET Core MVC 5 templates have been removed.
 
-|                       |  Vue + TypeScript |  Vue  | React + TypeScript |  React |
-| :-------------------: | :---------------: | :---: | :----------------: | :----: |
-| Asp.Net Core MVC 5    |        O          |   X   |         X          |    X   |
-| Net 6 Use Controllers |        O          |   O   |         O          |    O   |
-| Net 6 + Minimal API   |        O          |   O   |         O          |    O   |
+|                                  |  Vue + TypeScript |  Vue  | React + TypeScript |  React |
+| :------------------------------: | :---------------: | :---: | :----------------: | :----: |
+| ASP\.NET Core MVC (.NET 10)       |        O          |   O   |         O          |    O   |
+| .NET 10 Controllers              |        O          |   O   |         O          |    O   |
+| .NET 10 Minimal API              |        O          |   O   |         O          |    O   |
+
+
+# Credits
+Special thanks to [**MakotoAtsu**](https://github.com/MakotoAtsu) for creating the original [AspNetCore Vite Starter](https://marketplace.visualstudio.com/items?itemName=MakotoAtsu.AspNetCoreViteStarter). This fork stands on the foundation they provided — thank you for the great work.
 
 
 # How to use it
-VS marketplace : https://marketplace.visualstudio.com/items?itemName=MakotoAtsu.AspNetCoreViteStarter
+Download the latest `.vsix` release from [GitHub Releases](https://github.com/tenyi/AspNetCore_Vite_Template/releases) and install it in Visual Studio 2026 or newer.
 
 <br>
 
-1. Install this extension in your VS2026 (download from web page or use VS extension manager)
+1. Install the `.vsix` in Visual Studio (double-click the downloaded file, or use the VS extension manager)
 <br>
 
 2. Create a new project and choose 1 template
