@@ -1,62 +1,95 @@
 <script setup>
 import { ref } from 'vue'
-
-defineProps({
-  msg: String
-})
+import viteLogo from '../assets/vite.svg'
+import heroImg from '../assets/hero.png'
+import vueLogo from '../assets/vue.svg'
 
 const count = ref(0)
-const backendResult = ref('Please click button...') 
-
-const fetchWeatherForecast = () => {
-  fetch('/WeatherForecast')
-    .then(resp => resp.json())
-    .then(json => {
-      backendResult.value = json
-      console.log(json)
-    })
-}
-
-const fetchMessage = () => {
-  fetch('/WeatherForecast/Message')
-    .then(resp => resp.text())
-    .then(msg => backendResult.value = msg)
-}
-
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <div>
-      <button :style="{ margin: '10px' }" type="button" @click=fetchMessage>Fetch Message from backend</button>
-      <button :style="{ margin: '10px' }" type="button" @click="count++">count is {{ count }}</button>
-      <button :style="{ margin: '10px' }" type="button" @click=fetchWeatherForecast>Fetch Weather Forecast from backend</button>
+  <section id="center">
+    <div class="hero">
+      <img :src="heroImg" class="base" width="170" height="179" alt="" />
+      <img :src="vueLogo" class="framework" alt="Vue logo" />
+      <img :src="viteLogo" class="vite" alt="Vite logo" />
     </div>
-    <code>{{backendResult}}</code>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+    <div>
+      <h1>Get started</h1>
+      <p>Edit <code>src/App.vue</code> and save to test <code>HMR</code></p>
+    </div>
+    <button type="button" class="counter" @click="count++">
+      Count is {{ count }}
+    </button>
+  </section>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <div class="ticks"></div>
+
+  <section id="next-steps">
+    <div id="docs">
+      <svg class="icon" role="presentation" aria-hidden="true">
+        <use href="/icons.svg#documentation-icon"></use>
+      </svg>
+      <h2>Documentation</h2>
+      <p>Your questions, answered</p>
+      <ul>
+        <li>
+          <a href="https://vite.dev/" target="_blank">
+            <img class="logo" :src="viteLogo" alt="" />
+            Explore Vite
+          </a>
+        </li>
+        <li>
+          <a href="https://vuejs.org/" target="_blank">
+            <img class="button-icon" :src="vueLogo" alt="" />
+            Learn more
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="social">
+      <svg class="icon" role="presentation" aria-hidden="true">
+        <use href="/icons.svg#social-icon"></use>
+      </svg>
+      <h2>Connect with us</h2>
+      <p>Join the Vite community</p>
+      <ul>
+        <li>
+          <a href="https://github.com/vitejs/vite" target="_blank">
+            <svg class="button-icon" role="presentation" aria-hidden="true">
+              <use href="/icons.svg#github-icon"></use>
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://chat.vite.dev/" target="_blank">
+            <svg class="button-icon" role="presentation" aria-hidden="true">
+              <use href="/icons.svg#discord-icon"></use>
+            </svg>
+            Discord
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/vite_js" target="_blank">
+            <svg class="button-icon" role="presentation" aria-hidden="true">
+              <use href="/icons.svg#x-icon"></use>
+            </svg>
+            X.com
+          </a>
+        </li>
+        <li>
+          <a href="https://bsky.app/profile/vite.dev" target="_blank">
+            <svg class="button-icon" role="presentation" aria-hidden="true">
+              <use href="/icons.svg#bluesky-icon"></use>
+            </svg>
+            Bluesky
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ticks"></div>
+  <section id="spacer"></section>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>

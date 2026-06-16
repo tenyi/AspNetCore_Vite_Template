@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="AspNetCore_Vite_Starter/AspNetCore_Vite_Starter.csproj" Id="e1015e75-e0d5-4ff2-a6dc-3ed97157b980">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+</Solution>
