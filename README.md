@@ -20,7 +20,7 @@ VS marketplace : https://marketplace.visualstudio.com/items?itemName=MakotoAtsu.
 
 <br>
 
-1. Install this extension in your VS2019 or VS2022 (download from web page or use VS extension manager)
+1. Install this extension in your VS2026 (download from web page or use VS extension manager)
 <br>
 
 2. Create a new project and choose 1 template
